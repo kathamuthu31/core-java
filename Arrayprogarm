@@ -63,4 +63,28 @@ Enter the Values:3
 Enter the Values:4
 Enter the Values:5
  1 3 5 */
+ package StringClass;
 
+public class Array {
+
+	public static void main(String[] args) {
+		int a[]= {1,2,3,4};
+		int b[]= {5,6,7,8,9};
+		int c[]=new int[a.length+b.length];
+		int size=a.length+b.length;
+		for(int i=0;i<a.length;i++) {
+			c[i]=a[i];
+			}
+			for(int j=a.length;j<size;j++) {
+				c[j]=b[j-a.length];
+			}
+			for(int k=0;k<c.length;k++) {
+				System.out.print(c[k]+" ");
+			}
+		}
+		
+	}
+
+
+/* output:
+1 2 3 4 5 6 7 8 9  */
